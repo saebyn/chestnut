@@ -1,0 +1,1 @@
+[{"name":"virtual DOM","id":"virtual dom","description":"Similar to the DOM your browser manages, but consisting of simple\nJavascript objects. This is what React.js uses so it doesn't have to\ntouch the real DOM unless necessary."}]
