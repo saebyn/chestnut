@@ -31,9 +31,13 @@
         
 <link rel="stylesheet" href="gitbook/style.css">
 
+    
+    <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-anchors/plugin.css">
+    
+
 
         
-    <div class="book" data-level="1.2" data-basepath="." data-revision="1417281342870">
+    <div class="book" data-level="1.2" data-basepath="." data-revision="1417292315532">
     
 
 <div class="book-summary">
@@ -259,7 +263,7 @@
                 
                     <section class="normal" id="section-gitbook_3">
                     
-                        <h1 id="invoking-chestnut">Invoking Chestnut</h1>
+                        <h1 id="invoking-chestnut"><a name="invoking-chestnut" class="plugin-anchor" href="#invoking-chestnut"><span class="fa fa-link"></span></a>Invoking Chestnut</h1>
 <p>Chestnut is a Leiningen template, you use it through the <code>lein new &lt;template&gt; &lt;project name&gt;</code>
 command. When you tell <code>lein new</code> to use the
 Chestnut template, it will download the latest stable version
@@ -270,14 +274,14 @@ handled by <code>lein new</code>, some are handled by Chestnut. You should
 separate them with <code>--</code> to not confuse Leiningen</p>
 <pre><code class="lang-sh">lein new chestnut &lt;project name&gt; &lt;leiningen flags&gt; -- &lt;chestnut flags&gt;
 </code></pre>
-<p>You can invoke <code>lein help new</code> for more info on Leiningen&#39;s flags. The
+<p>You can invoke <code>lein help new</code> for more info on Leiningen&apos;s flags. The
 flags that Chestnut supports are listed below.</p>
-<h2 id="chestnut-flags">Chestnut Flags</h2>
-<h3 id="--http-kit"><code>--http-kit</code></h3>
+<h2 id="chestnut-flags"><a name="chestnut-flags" class="plugin-anchor" href="#chestnut-flags"><span class="fa fa-link"></span></a>Chestnut Flags</h2>
+<h3 id="--http-kit"><a name="--http-kit" class="plugin-anchor" href="#--http-kit"><span class="fa fa-link"></span></a><code>--http-kit</code></h3>
 <p>Use <a href="http://http-kit.org/server.html" target="_blank">HTTP Kit</a> as HTTP server,
-instead of Jetty. If you&#39;re not sure why you would need this, then
-you&#39;re probably fine sticking to the default.</p>
-<h3 id="--site-middleware"><code>--site-middleware</code></h3>
+instead of Jetty. If you&apos;re not sure why you would need this, then
+you&apos;re probably fine sticking to the default.</p>
+<h3 id="--site-middleware"><a name="--site-middleware" class="plugin-anchor" href="#--site-middleware"><span class="fa fa-link"></span></a><code>--site-middleware</code></h3>
 <p>We load some default Ring middleware to handle common concerns in web
 applications. It is assumed your app will mainly consist of an API and
 a Clojurescript client-side app, so only a minimal amount of
@@ -286,24 +290,24 @@ middleware is loaded, notable handling of urlencoded parameters.</p>
 pages, you will want to use <code>--site-middleware</code>, which will also set
 up middleware for sessions, cookies, xss protection, frame options
 headers, static resources, etc.</p>
-<h3 id="--om-tools"><code>--om-tools</code></h3>
-<p>For writing Om components, some people prefer to use Prismatic&#39;s
+<h3 id="--om-tools"><a name="--om-tools" class="plugin-anchor" href="#--om-tools"><span class="fa fa-link"></span></a><code>--om-tools</code></h3>
+<p>For writing Om components, some people prefer to use Prismatic&apos;s
 <a href="https://github.com/Prismatic/om-tools" target="_blank">om-tools.dom</a> instead of
-<code>om.dom</code>. This flag switches out one for the other so you don&#39;t have
+<code>om.dom</code>. This flag switches out one for the other so you don&apos;t have
 to.</p>
-<h3 id="--cljx"><code>--cljx</code></h3>
+<h3 id="--cljx"><a name="--cljx" class="plugin-anchor" href="#--cljx"><span class="fa fa-link"></span></a><code>--cljx</code></h3>
 <p>Add the necessary configuration to be able to share code between
 Clojure and Clojurescript Using
 <a href="https://github.com/lynaghk/cljx" target="_blank">cljx</a>.</p>
 <p>Note that the Clojure community is working on a more standard
 alternative using
 <a href="http://dev.clojure.org/display/design/Feature+Expressions" target="_blank">Feature Expressions</a></p>
-<h3 id="--less"><code>--less</code></h3>
+<h3 id="--less"><a name="--less" class="plugin-anchor" href="#--less"><span class="fa fa-link"></span></a><code>--less</code></h3>
 <p>Add support for the <a href="https://github.com/montoux/lein-less" target="_blank">less</a> CSS preprocessor.</p>
-<h2 id="snapshot">SNAPSHOT</h2>
+<h2 id="snapshot"><a name="snapshot" class="plugin-anchor" href="#snapshot"><span class="fa fa-link"></span></a>SNAPSHOT</h2>
 <p>New features in Chestnut are first released in a special version with
 a name ending in <code>-SNAPSHOT</code>. This signals to leiningen that this is a
-development release that&#39;s not intended for the general public.</p>
+development release that&apos;s not intended for the general public.</p>
 <p>If you are already quite comfortable with Clojure and Clojurescript
 development, we recommend running the snapshot version and file any
 issues you run into, so we can make sure the next release of Chestnut
@@ -333,6 +337,10 @@ will be solid and stable.</p>
 <script src="gitbook/app.js"></script>
 
     
+    <script src="gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
     <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
@@ -342,12 +350,12 @@ will be solid and stable.</p>
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"ga":{"token":"UA-16178122-5","configuration":"auto"}};
     gitbook.start(config);
 });
 </script>
 
-        
+        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-16178122-5', 'auto');ga('send', 'pageview');</script>
     </body>
     
 </html>

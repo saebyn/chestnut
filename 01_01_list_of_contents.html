@@ -31,9 +31,13 @@
         
 <link rel="stylesheet" href="gitbook/style.css">
 
+    
+    <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-anchors/plugin.css">
+    
+
 
         
-    <div class="book" data-level="1.1" data-basepath="." data-revision="1417281342870">
+    <div class="book" data-level="1.1" data-basepath="." data-revision="1417292315532">
     
 
 <div class="book-summary">
@@ -257,12 +261,12 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_6">
+                    <section class="normal" id="section-gitbook_7">
                     
-                        <h1 id="list-of-contents">List of Contents</h1>
+                        <h1 id="list-of-contents"><a name="list-of-contents" class="plugin-anchor" href="#list-of-contents"><span class="fa fa-link"></span></a>List of Contents</h1>
 <p>Chestnut mostly combines the work of others to give you everything you
-need. It&#39;s good to have a basic idea of what each of these does.</p>
-<h2 id="react">React</h2>
+need. It&apos;s good to have a basic idea of what each of these does.</p>
+<h2 id="react"><a name="react" class="plugin-anchor" href="#react"><span class="fa fa-link"></span></a>React</h2>
 <p><a href="http://facebook.github.io/react/" target="_blank">React</a> is a library for building
 user interfaces. It was created by Facebook to help them develop their
 applications.</p>
@@ -271,27 +275,27 @@ DOM. This means your UI automatically updates when your data
 changes. The virtual DOM lets React very efficiently figure out the
 changes in the UI. In React you define components that each render a
 piece of data.</p>
-<h2 id="om">Om</h2>
+<h2 id="om"><a name="om" class="plugin-anchor" href="#om"><span class="fa fa-link"></span></a>Om</h2>
 <p><a href="https://github.com/swannodette/om" target="_blank">Om</a> provides a ClojureScript
-interface to React. By relying on Clojurescripts&#39;s persistent data
+interface to React. By relying on Clojurescripts&apos;s persistent data
 structures it can be even faster than plain react.</p>
 <p>There are a few other Clojurescript wrappers for React, each with
-their merits. But if you&#39;re using Chestnut, you get Om.</p>
-<h2 id="figwheel">Figwheel</h2>
+their merits. But if you&apos;re using Chestnut, you get Om.</p>
+<h2 id="figwheel"><a name="figwheel" class="plugin-anchor" href="#figwheel"><span class="fa fa-link"></span></a>Figwheel</h2>
 <p><a href="https://github.com/bhauman/lein-figwheel" target="_blank">Figwheel</a> powers the
 instant reloading of Clojurescript and CSS. When the application loads
 in the browser, it will connect to the Figwheel server. Whenever you
 save a Clojurescript or CSS file, Figwheel will recompile it, and send
 it to the browser. No page refresh required!</p>
-<h2 id="weasel">Weasel</h2>
-<p>In Clojure and other Lisps it&#39;s common to make heavy use of a REPL
+<h2 id="weasel"><a name="weasel" class="plugin-anchor" href="#weasel"><span class="fa fa-link"></span></a>Weasel</h2>
+<p>In Clojure and other Lisps it&apos;s common to make heavy use of a REPL
 (read-eval-print-loop, i.e. a command line interface) during
 development. Evaluating Clojurescript requires a Javascript
 environment, such as provided by your browser.</p>
 <p>Weasel gives you a REPL for Clojurescript. It will wait for a browser
 to load and connect, so that it can send code to the browser to be
 evaluated. This way you can interact live with your running application.</p>
-<h2 id="ring">Ring</h2>
+<h2 id="ring"><a name="ring" class="plugin-anchor" href="#ring"><span class="fa fa-link"></span></a>Ring</h2>
 <p>Many web applications also have a server-side component, even for just
 an API. The HTML page containing the Clojurescript app also needs to
 be served from somewhere. There are a number of HTTP servers available
@@ -301,11 +305,11 @@ interface for your app to communicate with a web server.</p>
 <p>Ring also makes it easy to set up middleware that does extra
 processing as part of a web request/response cycle. Chestnut sets up a
 Ring middleware that handles hot reloading of server-side code.</p>
-<h2 id="compojure">Compojure</h2>
+<h2 id="compojure"><a name="compojure" class="plugin-anchor" href="#compojure"><span class="fa fa-link"></span></a>Compojure</h2>
 <p><a href="http://weavejester.github.io/compojure/" target="_blank">Compojure</a> is a &quot;concise
 routing library for Ring&quot;. It lets you configure request handlers
 based on HTTP method and URL patterns.</p>
-<h2 id="enlive">Enlive</h2>
+<h2 id="enlive"><a name="enlive" class="plugin-anchor" href="#enlive"><span class="fa fa-link"></span></a>Enlive</h2>
 <p><a href="https://github.com/cgrand/enlive" target="_blank">Enlive</a> a selector based HTML
 templating and transformation system. We use this to inject some
 development workflow related bits into <code>index.html</code>.</p>
@@ -331,6 +335,10 @@ development workflow related bits into <code>index.html</code>.</p>
 <script src="gitbook/app.js"></script>
 
     
+    <script src="gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
     <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
@@ -340,12 +348,12 @@ development workflow related bits into <code>index.html</code>.</p>
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"ga":{"token":"UA-16178122-5","configuration":"auto"}};
     gitbook.start(config);
 });
 </script>
 
-        
+        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-16178122-5', 'auto');ga('send', 'pageview');</script>
     </body>
     
 </html>

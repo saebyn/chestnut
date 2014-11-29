@@ -29,9 +29,13 @@
         
 <link rel="stylesheet" href="gitbook/style.css">
 
+    
+    <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-anchors/plugin.css">
+    
+
 
         
-    <div class="book" data-level="4" data-basepath="." data-revision="1417281342870">
+    <div class="book" data-level="4" data-basepath="." data-revision="1417292315532">
     
 
 <div class="book-summary">
@@ -255,52 +259,52 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_4">
+                    <section class="normal" id="section-gitbook_5">
                     
-                        <h1 id="changelog">Changelog</h1>
-<h2 id="v070-snapshot">v0.7.0-SNAPSHOT</h2>
+                        <h1 id="changelog"><a name="changelog" class="plugin-anchor" href="#changelog"><span class="fa fa-link"></span></a>Changelog</h1>
+<h2 id="v070-snapshot"><a name="v070-snapshot" class="plugin-anchor" href="#v070-snapshot"><span class="fa fa-link"></span></a>v0.7.0-SNAPSHOT</h2>
 <ul>
 <li>Add support for the LESS CSS pre-processor (<a href="https://github.com/teur" target="_blank">Denis Golovnev</a>)</li>
 <li>Make weasel print both to the REPL and the browser console (<a href="https://github.com/mrcslws" target="_blank">Marcus Lewis</a>)</li>
 <li>Enable auto-reload of enlive templates in dev mode (<a href="https://github.com/rymndhng" target="_blank">Ray H</a>)</li>
 </ul>
-<h2 id="v060">v0.6.0</h2>
+<h2 id="v060"><a name="v060" class="plugin-anchor" href="#v060"><span class="fa fa-link"></span></a>v0.6.0</h2>
 <ul>
 <li>Add optional support for CLJX (<a href="https://github.com/luxbock" target="_blank">Olli Piepponen</a>)</li>
 <li>Support generation of projects named using the groupId/artifactId convention (e.g. com.example/foo) (<a href="https://github.com/stebel" target="_blank">Steeve Beliveau</a>)</li>
 </ul>
-<h2 id="v050">v0.5.0</h2>
+<h2 id="v050"><a name="v050" class="plugin-anchor" href="#v050"><span class="fa fa-link"></span></a>v0.5.0</h2>
 <ul>
 <li>Run figwheel inside <code>(run)</code> so we only need one process</li>
-<li>Configure figwheel&#39;s CSS reloading and load a placeholder <code>style.css</code></li>
+<li>Configure figwheel&apos;s CSS reloading and load a placeholder <code>style.css</code></li>
 <li>Refresh Om when Figwheel reloads</li>
 <li>Update ClojureScript: 0.0-2342 =&gt; 0.0-2371</li>
 <li>Update Compojure: 1.1.9 =&gt; 1.2.0</li>
 <li>Update Om: 0.7.1 =&gt; 0.7.3</li>
 <li>No longer depend on Weasel in production mode</li>
 </ul>
-<h2 id="v040">v0.4.0</h2>
+<h2 id="v040"><a name="v040" class="plugin-anchor" href="#v040"><span class="fa fa-link"></span></a>v0.4.0</h2>
 <ul>
 <li>Option to switch to HTTP Kit for a web server</li>
 <li>Add reloading middleware</li>
 <li>Add default compojure.handler.site middleware</li>
 </ul>
-<h2 id="v030">v0.3.0</h2>
+<h2 id="v030"><a name="v030" class="plugin-anchor" href="#v030"><span class="fa fa-link"></span></a>v0.3.0</h2>
 <ul>
 <li>Switched to Weasel for Austin</li>
 <li>Optimized uberjar</li>
 <li>Fix usage of {{name}}/{{sanitized}}</li>
-<li>Load react from the jar, instead of from Facebook&#39;s CDN</li>
+<li>Load react from the jar, instead of from Facebook&apos;s CDN</li>
 <li>Update dependencies (Clojurescript, Ring, Compojure, Environ)</li>
 </ul>
-<h2 id="v020">v0.2.0</h2>
+<h2 id="v020"><a name="v020" class="plugin-anchor" href="#v020"><span class="fa fa-link"></span></a>v0.2.0</h2>
 <ul>
 <li>Uberjar support</li>
 <li>Heroku support (Procfile, system.properties)</li>
 <li>added .gitignore</li>
 <li>First version of development/production modes</li>
 </ul>
-<h2 id="v010">v0.1.0</h2>
+<h2 id="v010"><a name="v010" class="plugin-anchor" href="#v010"><span class="fa fa-link"></span></a>v0.1.0</h2>
 <ul>
 <li>First release, containing Austin, Figwheel, Om</li>
 </ul>
@@ -324,6 +328,10 @@
 <script src="gitbook/app.js"></script>
 
     
+    <script src="gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
     <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
@@ -333,12 +341,12 @@
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"ga":{"token":"UA-16178122-5","configuration":"auto"}};
     gitbook.start(config);
 });
 </script>
 
-        
+        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-16178122-5', 'auto');ga('send', 'pageview');</script>
     </body>
     
 </html>

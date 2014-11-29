@@ -31,9 +31,13 @@
         
 <link rel="stylesheet" href="gitbook/style.css">
 
+    
+    <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-anchors/plugin.css">
+    
+
 
         
-    <div class="book" data-level="2" data-basepath="." data-revision="1417281342870">
+    <div class="book" data-level="2" data-basepath="." data-revision="1417292315532">
     
 
 <div class="book-summary">
@@ -257,10 +261,10 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_5">
+                    <section class="normal" id="section-gitbook_4">
                     
-                        <h1 id="developer-notes">Developer notes</h1>
-<h2 id="local-copy">Local copy</h2>
+                        <h1 id="developer-notes"><a name="developer-notes" class="plugin-anchor" href="#developer-notes"><span class="fa fa-link"></span></a>Developer notes</h1>
+<h2 id="local-copy"><a name="local-copy" class="plugin-anchor" href="#local-copy"><span class="fa fa-link"></span></a>Local copy</h2>
 <p>If you want to customize Chestnut, or try unreleased features, you can run directly from master like this:</p>
 <pre><code class="lang-sh">git clone https://github.com/plexus/chestnut.git
 <span class="hljs-built_in">cd</span> chestnut
@@ -268,20 +272,20 @@ lein install
 </code></pre>
 <p>Note that master may be partially or wholly broken. I try to do
 extensive manual testing before releasing a new stable version, so if
-you don&#39;t like surprises then stick to the version on Clojars. Issue
+you don&apos;t like surprises then stick to the version on Clojars. Issue
 reports and pull requests are very welcome.</p>
-<h2 id="sources">Sources</h2>
+<h2 id="sources"><a name="sources" class="plugin-anchor" href="#sources"><span class="fa fa-link"></span></a>Sources</h2>
 <p>I used the
 <a href="https://github.com/cemerick/austin/tree/master/browser-connected-repl-sample" target="_blank">browser-connected-repl</a>
-that&#39;s included with <a href="https://github.com/cemerick/austin" target="_blank">Austin</a> as a
+that&apos;s included with <a href="https://github.com/cemerick/austin" target="_blank">Austin</a> as a
 starting point, then pulled in bits from
 <a href="https://github.com/ejlo/cljs-liveedit-webapp" target="_blank">cljs-liveedit-webapp</a>
-until things worked. Figwheel&#39;s <a href="https://github.com/bhauman/flappy-bird-demo" target="_blank">Flappy Bird Demo app</a> also provided some ideas. The concept of refreshing Om when Figwheel reloads was taken from <a href="http://blog.michielborkent.nl/blog/2014/09/25/figwheel-keep-Om-turning/" target="_blank">this blog post</a> by <a href="https://github.com/borkdude" target="_blank">Michiel Borkent</a>.</p>
-<p>For Heroku support I looked at Heroku&#39;s
+until things worked. Figwheel&apos;s <a href="https://github.com/bhauman/flappy-bird-demo" target="_blank">Flappy Bird Demo app</a> also provided some ideas. The concept of refreshing Om when Figwheel reloads was taken from <a href="http://blog.michielborkent.nl/blog/2014/09/25/figwheel-keep-Om-turning/" target="_blank">this blog post</a> by <a href="https://github.com/borkdude" target="_blank">Michiel Borkent</a>.</p>
+<p>For Heroku support I looked at Heroku&apos;s
 <a href="https://github.com/heroku/clojure-getting-started" target="_blank">clojure-getting-started</a>
 example app.</p>
-<h2 id="license">License</h2>
-<p>Copyright © 2014 Arne Brasseur</p>
+<h2 id="license"><a name="license" class="plugin-anchor" href="#license"><span class="fa fa-link"></span></a>License</h2>
+<p>Copyright &#xA9; 2014 Arne Brasseur</p>
 <p>Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.</p>
 
@@ -306,6 +310,10 @@ your option) any later version.</p>
 <script src="gitbook/app.js"></script>
 
     
+    <script src="gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
     <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
@@ -315,12 +323,12 @@ your option) any later version.</p>
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"ga":{"token":"UA-16178122-5","configuration":"auto"}};
     gitbook.start(config);
 });
 </script>
 
-        
+        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-16178122-5', 'auto');ga('send', 'pageview');</script>
     </body>
     
 </html>
