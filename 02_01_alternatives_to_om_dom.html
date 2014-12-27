@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>Recipes | Chestnut</title>
+        <title>Alternatives to om.dom | Chestnut</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.3.4">
@@ -18,10 +18,10 @@
         
     
     
-    <link rel="next" href="./02_01_alternatives_to_om_dom.html" />
+    <link rel="next" href="./03_00_developer_notes.html" />
     
     
-    <link rel="prev" href="./01_02_invoking_chestnut.html" />
+    <link rel="prev" href="./02_00_recipes.html" />
     
 
         
@@ -37,7 +37,7 @@
 
 
         
-    <div class="book" data-level="2" data-basepath="." data-revision="1419697443298">
+    <div class="book" data-level="2.1" data-basepath="." data-revision="1419697443298">
     
 
 <div class="book-summary">
@@ -123,7 +123,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="2" data-path="02_00_recipes.html">
+        <li class="chapter " data-level="2" data-path="02_00_recipes.html">
             
                 
                     <a href="./02_00_recipes.html">
@@ -140,7 +140,7 @@
                 
     
         
-        <li class="chapter " data-level="2.1" data-path="02_01_alternatives_to_om_dom.html">
+        <li class="chapter active" data-level="2.1" data-path="02_01_alternatives_to_om_dom.html">
             
                 
                     <a href="./02_01_alternatives_to_om_dom.html">
@@ -299,13 +299,44 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_3">
+                    <section class="normal" id="section-gitbook_4">
                     
-                        <h1 id="recipes"><a name="recipes" class="plugin-anchor" href="#recipes"><span class="fa fa-link"></span></a>Recipes</h1>
-<p>Things to do after generating your Chestnut app.</p>
+                        <h1 id="alternatives-to-omdom"><a name="alternatives-to-omdom" class="plugin-anchor" href="#alternatives-to-omdom"><span class="fa fa-link"></span></a>Alternatives to om.dom</h1>
+<p>There are a few libraries available that provide alternatives to om.dom.</p>
+<h2 id="om-tools"><a name="om-tools" class="plugin-anchor" href="#om-tools"><span class="fa fa-link"></span></a>om-tools</h2>
+<p><a href="https://github.com/Prismatic/om-tools" target="_blank">Om-tools</a> is a library by
+Prismatic to make writing Om components easier.</p>
+<p>First, in <code>project.clj</code>, add <code>om-tools</code> as a dependency</p>
+<pre><code class="lang-clojure">  :dependencies [# ...
+                 [prismatic/om-tools &quot;0.3.9&quot; :exclusions [potemkin]]]
+</code></pre>
+<p>In <code>core.cljs</code>, replace <code>[om.dom :as dom :include-macros true]</code> with</p>
+<pre><code class="lang-clojurescript">[om-tools.dom :as dom :include-macros true]
+[om-tools.core :refer-macros [defcomponent]]
+</code></pre>
+<p>If you still have a freshly generated Chestnut app, the only further change you need to do is remove the <code>nil</code> in <code>(dom/h1 nil (:text app))</code>.</p>
+<p>Compared to <code>om.dom</code>, <code>om-tools.dom</code> does three things different for a cleaner syntax.</p>
 <ul>
-<li><a href="02_01_alternatives_to_om_dom.html">Alternatives to om.dom</a></li>
+<li>element attributes can be omitted (that&apos;s why the <code>nil</code> is no longer necessary), and can be Clojurescript maps. So the <code>#js</code> reader macro is not needed</li>
+<li>attribute names are more Clojure-esque &quot;natural&quot;. <code>:className</code> instead of <code>:class</code>, <code>:onClick</code> instead of <code>:on-click</code></li>
+<li>children can be collections, so you don&apos;t need to use <code>apply</code> to when setting a collection as children of an element</li>
 </ul>
+<p>Have a look at the <a href="https://github.com/Prismatic/om-tools#dom-tools" target="_blank">om-tools.dom docs</a> for more examples.</p>
+<h2 id="sablono"><a name="sablono" class="plugin-anchor" href="#sablono"><span class="fa fa-link"></span></a>Sablono</h2>
+<p><a href="https://github.com/r0man/sablono" target="_blank">Sablono</a> provides Hiccup-style templating for Om.</p>
+<p>First, in <code>project.clj</code>, add <code>sablono</code> as a dependency</p>
+<pre><code class="lang-clojure">  :dependencies [# ...
+                 [sablono &quot;0.2.22&quot;]]
+</code></pre>
+<p>In <code>core.cljs</code>, replace <code>[om.dom :as dom :include-macros true]</code> with</p>
+<pre><code class="lang-clojurescript">[sablono.core :as html :refer-macros [html]]
+</code></pre>
+<p>This <code>h1</code> definition</p>
+<pre><code class="lang-clojurescript">(dom/h1 nil (:text app))
+</code></pre>
+<p>becomes</p>
+<pre><code class="lang-clojurescript">(html [:h1 (:text app)])
+</code></pre>
 
                     
                     </section>
@@ -316,10 +347,10 @@
         </div>
 
         
-        <a href="./01_02_invoking_chestnut.html" class="navigation navigation-prev " aria-label="Previous page: Invoking Chestnut"><i class="fa fa-angle-left"></i></a>
+        <a href="./02_00_recipes.html" class="navigation navigation-prev " aria-label="Previous page: Recipes"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./02_01_alternatives_to_om_dom.html" class="navigation navigation-next " aria-label="Next page: Alternatives to om.dom"><i class="fa fa-angle-right"></i></a>
+        <a href="./03_00_developer_notes.html" class="navigation navigation-next " aria-label="Next page: Developer Notes"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
