@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>Developer Notes | Chestnut</title>
+        <title>Recipes | Chestnut</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.3.4">
@@ -18,7 +18,7 @@
         
     
     
-    <link rel="next" href="./FAQ.html" />
+    <link rel="next" href="./02_01_alternatives_to_om_dom.html" />
     
     
     <link rel="prev" href="./01_02_invoking_chestnut.html" />
@@ -37,7 +37,7 @@
 
 
         
-    <div class="book" data-level="2" data-basepath="." data-revision="1417292315532">
+    <div class="book" data-level="2" data-basepath="." data-revision="1419687807062">
     
 
 <div class="book-summary">
@@ -123,13 +123,51 @@
         </li>
     
         
-        <li class="chapter active" data-level="2" data-path="02_00_developer_notes.html">
+        <li class="chapter active" data-level="2" data-path="02_00_recipes.html">
             
                 
-                    <a href="./02_00_developer_notes.html">
+                    <a href="./02_00_recipes.html">
                         <i class="fa fa-check"></i>
                         
                             <b>2.</b>
+                        
+                         Recipes
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="2.1" data-path="02_01_alternatives_to_om_dom.html">
+            
+                
+                    <a href="./02_01_alternatives_to_om_dom.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                         Alternatives to om.dom
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3" data-path="03_00_developer_notes.html">
+            
+                
+                    <a href="./03_00_developer_notes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
                         
                          Developer Notes
                     </a>
@@ -139,13 +177,13 @@
         </li>
     
         
-        <li class="chapter " data-level="3" data-path="FAQ.html">
+        <li class="chapter " data-level="4" data-path="FAQ.html">
             
                 
                     <a href="./FAQ.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>3.</b>
+                            <b>4.</b>
                         
                          FAQ
                     </a>
@@ -155,13 +193,13 @@
         </li>
     
         
-        <li class="chapter " data-level="4" data-path="CHANGELOG.html">
+        <li class="chapter " data-level="5" data-path="CHANGELOG.html">
             
                 
                     <a href="./CHANGELOG.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>4.</b>
+                            <b>5.</b>
                         
                          Changelog
                     </a>
@@ -261,33 +299,13 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_4">
+                    <section class="normal" id="section-gitbook_3">
                     
-                        <h1 id="developer-notes"><a name="developer-notes" class="plugin-anchor" href="#developer-notes"><span class="fa fa-link"></span></a>Developer notes</h1>
-<h2 id="local-copy"><a name="local-copy" class="plugin-anchor" href="#local-copy"><span class="fa fa-link"></span></a>Local copy</h2>
-<p>If you want to customize Chestnut, or try unreleased features, you can run directly from master like this:</p>
-<pre><code class="lang-sh">git clone https://github.com/plexus/chestnut.git
-<span class="hljs-built_in">cd</span> chestnut
-lein install
-</code></pre>
-<p>Note that master may be partially or wholly broken. I try to do
-extensive manual testing before releasing a new stable version, so if
-you don&apos;t like surprises then stick to the version on Clojars. Issue
-reports and pull requests are very welcome.</p>
-<h2 id="sources"><a name="sources" class="plugin-anchor" href="#sources"><span class="fa fa-link"></span></a>Sources</h2>
-<p>I used the
-<a href="https://github.com/cemerick/austin/tree/master/browser-connected-repl-sample" target="_blank">browser-connected-repl</a>
-that&apos;s included with <a href="https://github.com/cemerick/austin" target="_blank">Austin</a> as a
-starting point, then pulled in bits from
-<a href="https://github.com/ejlo/cljs-liveedit-webapp" target="_blank">cljs-liveedit-webapp</a>
-until things worked. Figwheel&apos;s <a href="https://github.com/bhauman/flappy-bird-demo" target="_blank">Flappy Bird Demo app</a> also provided some ideas. The concept of refreshing Om when Figwheel reloads was taken from <a href="http://blog.michielborkent.nl/blog/2014/09/25/figwheel-keep-Om-turning/" target="_blank">this blog post</a> by <a href="https://github.com/borkdude" target="_blank">Michiel Borkent</a>.</p>
-<p>For Heroku support I looked at Heroku&apos;s
-<a href="https://github.com/heroku/clojure-getting-started" target="_blank">clojure-getting-started</a>
-example app.</p>
-<h2 id="license"><a name="license" class="plugin-anchor" href="#license"><span class="fa fa-link"></span></a>License</h2>
-<p>Copyright &#xA9; 2014 Arne Brasseur</p>
-<p>Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.</p>
+                        <h1 id="recipes"><a name="recipes" class="plugin-anchor" href="#recipes"><span class="fa fa-link"></span></a>Recipes</h1>
+<p>Things to do after generating your Chestnut app.</p>
+<ul>
+<li><a href="02_01_alternatives_to_om_dom.html">Alternatives to om.dom</a></li>
+</ul>
 
                     
                     </section>
@@ -301,7 +319,7 @@ your option) any later version.</p>
         <a href="./01_02_invoking_chestnut.html" class="navigation navigation-prev " aria-label="Previous page: Invoking Chestnut"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./FAQ.html" class="navigation navigation-next " aria-label="Next page: FAQ"><i class="fa fa-angle-right"></i></a>
+        <a href="./02_01_alternatives_to_om_dom.html" class="navigation navigation-next " aria-label="Next page: Alternatives to om.dom"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
