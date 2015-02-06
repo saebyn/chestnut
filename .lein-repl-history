@@ -1,0 +1,16 @@
+jnr.constants.platform.Signal
+jnr.constants.platform.Signal/resolver
+jnr.constants.platform.ConstantResolver
+(jnr.constants.platform.ConstantResolver. jnr.constants.Signal/class 20000 29999)
+(jnr.constants.platform.ConstantResolver. jnr.constants.platform.Signal/class 20000 29999)
+(jnr.constants.platform.ConstantResolver. jnr.constants.platform.Signal 20000 29999)
+(jnr.constants.platform.ConstantResolver/getResolver jnr.constants.platform.Signal 20000 29999)
+(jnr.constants.platform.ConstantResolver/getResolver jnr.constants.platform.Signal/class 20000 29999)
+(jnr.constants.platform.ConstantResolver/getResolver jnr.constants.platform.Signal 20000 29999)
+(class jnr.constants.platform.Signal)
+jnr.constants.platform.Signal/SIGKILL
+(.longValue jnr.constants.platform.Signal/SIGKILL)
+(.intValue jnr.constants.platform.Signal/SIGKILL)
+(jnr.jnr-posix.POSIXFactory/getPOSIX)
+(jnr.posix.POSIXFactory/getPOSIX)
+(- 5)
