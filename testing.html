@@ -37,7 +37,7 @@
 
 
         
-    <div class="book" data-level="4" data-basepath="." data-revision="1425660558795">
+    <div class="book" data-level="4" data-basepath="." data-revision="1425661202565">
     
 
 <div class="book-summary">
@@ -336,6 +336,7 @@
                         <h1 id="testing-chestnut"><a name="testing-chestnut" class="plugin-anchor" href="#testing-chestnut"><span class="fa fa-link"></span></a>Testing Chestnut</h1>
 <p>(This page is about testing Chestnut itself, <em>not</em> about how to do testing in your Chestnut app.)</p>
 <p>Because of the nature of Chestnut, testing it requires an interplay between terminal, repl, and browser. This is hard to automate, but we&apos;re trying anyway :) There are some basic tests available, but the test suite is not comprehensive.</p>
+<p>For process control the tests depend on unreleased features of <a href="https://github.com/jnr/jnr-process" target="_blank">jnr-process</a>, which in turn relies on unreleased code in <a href="https://github.com/jnr/jnr-posix" target="_blank">jnr-posix</a>. So clone those two repos and for each do <code>mvn install</code>. I <em>think</em> that&apos;s the only dependencies you need to set up. Leiningen will figure out the rest.</p>
 <p>To run the tests do <code>lein test</code>. This will start with executing <code>cd /tmp ; lein new chestnut --snapshot</code>, possibly with some options. So to run the tests against your local version, you have to first do a <code>lein install</code>. Also make sure that if the tests are using <code>--snapshot</code>
 , that the version you&apos;re installing ends with <code>-SNAPSHOT</code>.</p>
 <p>For WebDriver, the tests are currently set up to use Chrome, and to look for the chromedriver executable in <code>~/bin/chromedriver</code>. This might not be suitable for your system. Check the <a href="https://github.com/semperos/clj-webdriver" target="_blank">clj-webdriver</a> docs and make sure it&apos;s able to open a browser. See <code>src/chestnut/test/integration.clj</code> to twiddle with this. You can try this in a REPL to see if a browser pops up:</p>
