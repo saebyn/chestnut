@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>Testing | Chestnut</title>
+        <title>Testing Chestnut | Chestnut</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.3.4">
@@ -37,7 +37,7 @@
 
 
         
-    <div class="book" data-level="4" data-basepath="." data-revision="1423226178047">
+    <div class="book" data-level="4" data-basepath="." data-revision="1425660558795">
     
 
 <div class="book-summary">
@@ -164,7 +164,7 @@
                         
                             <b>2.2.</b>
                         
-                         Testing
+                         Testing Your App
                     </a>
                 
             
@@ -201,7 +201,7 @@
                         
                             <b>4.</b>
                         
-                         Testing
+                         Testing Chestnut
                     </a>
                 
             
@@ -333,12 +333,21 @@
                 
                     <section class="normal" id="section-gitbook_11">
                     
-                        <h1 id="testing"><a name="testing" class="plugin-anchor" href="#testing"><span class="fa fa-link"></span></a>Testing</h1>
+                        <h1 id="testing-chestnut"><a name="testing-chestnut" class="plugin-anchor" href="#testing-chestnut"><span class="fa fa-link"></span></a>Testing Chestnut</h1>
 <p>(This page is about testing Chestnut itself, <em>not</em> about how to do testing in your Chestnut app.)</p>
-<p>Because of the nature of Chestnut, testing it requires an interplay between terminal, repl, and browser. While not impossible to automate, it is hard to do well, so for the time being we rely on manual testing to verify all features are working as expected before a release.</p>
-<p>Doing this kind of testing is the most time consuming part of maintaining Chestnut, and it&apos;s one of the best things to do to help the project.</p>
+<p>Because of the nature of Chestnut, testing it requires an interplay between terminal, repl, and browser. This is hard to automate, but we&apos;re trying anyway :) There are some basic tests available, but the test suite is not comprehensive.</p>
+<p>To run the tests do <code>lein test</code>. This will start with executing <code>cd /tmp ; lein new chestnut --snapshot</code>, possibly with some options. So to run the tests against your local version, you have to first do a <code>lein install</code>. Also make sure that if the tests are using <code>--snapshot</code>
+, that the version you&apos;re installing ends with <code>-SNAPSHOT</code>.</p>
+<p>For WebDriver, the tests are currently set up to use Chrome, and to look for the chromedriver executable in <code>~/bin/chromedriver</code>. This might not be suitable for your system. Check the <a href="https://github.com/semperos/clj-webdriver" target="_blank">clj-webdriver</a> docs and make sure it&apos;s able to open a browser. See <code>src/chestnut/test/integration.clj</code> to twiddle with this. You can try this in a REPL to see if a browser pops up:</p>
+<pre><code class="lang-clojure"><span class="hljs-list">(<span class="hljs-keyword">System/setProperty</span> <span class="hljs-string">&quot;webdriver.chrome.driver&quot;</span> <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">str</span></span> <span class="hljs-list">(<span class="hljs-keyword">System/getenv</span> <span class="hljs-string">&quot;HOME&quot;</span>)</span> <span class="hljs-string">&quot;/bin/chromedriver&quot;</span>)</span>)</span>
+<span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">use</span></span> &apos;clj-webdriver.taxi)</span>
+<span class="hljs-list">(<span class="hljs-keyword">set-driver!</span> <span class="hljs-collection">{<span class="hljs-attribute">:browser</span> <span class="hljs-attribute">:chrome</span>}</span> <span class="hljs-string">&quot;https://github.com/plexus/chestnut&quot;</span>)</span>
+</code></pre>
+<p>Running these test <em>takes time</em>. There&apos;s a lot of JVM booting and shutting down, and it seems as the consecutive tests run this process actually becomes even slower. Because of this you might run into the problem where the test tries to boot a REPL, but this times out. To work around that you can add this to <code>src/leiningen/new/chestnut/project.clj</code>, after which you do a new <code>lein install</code></p>
+<pre><code class="lang-clojure">:repl-options {:timeout 200000} ;; Defaults to 30000 (30 seconds)
+</code></pre>
 <h2 id="basic-test"><a name="basic-test" class="plugin-anchor" href="#basic-test"><span class="fa fa-link"></span></a>Basic Test</h2>
-<p>This needs to be done for each of the feature flags.</p>
+<p>This is implemented now as an automated test, it will be executed for each of the feature flags.</p>
 <ul>
 <li>generate an app</li>
 <li>lein repl</li>
@@ -357,6 +366,14 @@
 <li>build an uberjar</li>
 <li>run with foreman, verify it works</li>
 <li>push to heroku, verify it works</li>
+</ul>
+<h2 id="feature-tests"><a name="feature-tests" class="plugin-anchor" href="#feature-tests"><span class="fa fa-link"></span></a>Feature tests</h2>
+<p>These are features, some hidden behind feature flags, that should be verified manually</p>
+<ul>
+<li>Clojure and Clojurescript unit test support</li>
+<li>CLJX</li>
+<li>speclj / specljs</li>
+<li>LESS</li>
 </ul>
 
                     

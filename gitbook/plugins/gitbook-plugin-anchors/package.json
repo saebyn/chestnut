@@ -26,9 +26,5 @@
   "readme": "Gitbook Anchors Plugin\n==============\n\nAdd Github style heading anchors to your book.\n\n![](https://cloud.githubusercontent.com/assets/2666107/3465465/9fc9a502-0266-11e4-80ca-09a1dad1473e.png)\n\nInstall in your book using\n\t \n```\n$ npm install --save gitbook-plugin-anchors\n```\n\nAdd the plugin to your `book.json`:\n    \n```\n{\n\t\"plugins\" : [ \"anchors\" ]\n}\t\t\n```\n\n",
   "readmeFilename": "README.md",
   "_id": "gitbook-plugin-anchors@0.4.0",
-  "dist": {
-    "shasum": "9253d438c0b1ded748af5abfeb131c4862574c3b"
-  },
-  "_from": "gitbook-plugin-anchors@*",
-  "_resolved": "https://registry.npmjs.org/gitbook-plugin-anchors/-/gitbook-plugin-anchors-0.4.0.tgz"
+  "_from": "gitbook-plugin-anchors@*"
 }
