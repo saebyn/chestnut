@@ -1,16 +1,24 @@
 (ns {{project-ns}}.core
-  (:require [om.core :as om :include-macros true]{{{core-cljs-requires}}}))
+  (:require [quiescent.core :as q]
+            [quiescent.dom :as d]
+            [kioo.core :as k])
+  (:require-macros [kioo.core :refer [defsnippet deftemplate]]))
 
 (enable-console-print!)
 
+(def root-element-id "app")
+
 (defonce app-state (atom {:text "Hello Chestnut!"}))
 
-(defn main []
-  (om/root
-    (fn [app owner]
-      (reify
-        om/IRender
-        (render [_]
-          (dom/h1 {{#not-om-tools?}}nil {{/not-om-tools?}}(:text app)))))
-    app-state
-    {:target (. js/document (getElementById "app"))}))
+
+(deftemplate UI "index.html" [data]
+  {[:#app :h1] (k/content (:text data))})
+
+
+(defn render []
+  (q/render (UI @app-state) (.getElementById js/document root-element-id))
+  (.requestAnimationFrame js/window render))
+
+
+(defn ^:export main []
+  (render))

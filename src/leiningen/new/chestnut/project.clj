@@ -13,8 +13,8 @@
                  [ring "1.3.2"]
                  [ring/ring-defaults "0.1.4"]
                  [compojure "1.3.2"]
-                 [enlive "1.1.6"]
-                 [org.omcljs/om "0.8.8"]
+                 [kioo "0.4.1-SNAPSHOT"]
+                 [quiescent/quiescent "0.2.0-RC2"]
                  [environ "1.0.0"]{{{project-clj-deps}}}]
 
   :plugins [[lein-cljsbuild "1.0.5"]
